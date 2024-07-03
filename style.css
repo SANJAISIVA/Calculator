@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.calculator {
+    width: 300px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.display {
+    /* white-space: pre-wrap;  */
+    /* to handle \n in case of not giving the
+    inside <pre> */
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 5px;
+    background-color: lightblue;
+    border: 1px solid brown;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: auto; 
+}
+  
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 5px;
+}
+  
+button {
+    height: 80px;
+    width: 70px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+.clear {
+    background-color: rgba(255, 0, 0, 0.655);
+}
+.clear:hover,
+.result:hover{
+    color: white;
+}
+.result {
+    background-color: rgba(255, 191, 0, 0.683);
+}
+
+button:hover {
+    color: blue;
+}
+
+@media (max-width:700px) {
+    button:hover {
+        /* pointer-events: none; */
+        color: white;
+    }
+}
